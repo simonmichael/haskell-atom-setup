@@ -45,18 +45,22 @@ add stack's bin directory to your PATH if possible. Eg:
 install GHC (Haskell compiler): `stack setup`
 
 ## Create a minimal program in terminal
-in a terminal/command/shell window:  
-`echo 'main = putStrLn "hello world"' > hello.hs`  
-`stack ghc hello.hs  # compile the program`  
-`./hello             # run it`  
+in a terminal/command/shell window:
+```
+echo 'main = putStrLn "hello world"' > hello.hs
+stack ghc hello.hs  # compile the program
+./hello             # run it
+```
 
 ## Test your program interactively in terminal
-`stack ghci`  
-`:load hello.hs`  
-`:main    # or any Haskell expression`  
-`:reload  # after changing hello.hs`  
-`:help`  
-`:quit`  
+```
+stack ghci
+:load hello.hs
+:main    # or any Haskell expression
+:reload  # after changing hello.hs
+:help
+:quit
+```
 
 <!-- ## Auto-compile your program in terminal -->
 <!-- ``` -->
@@ -69,7 +73,7 @@ in a terminal/command/shell window:
 <!-- ``` -->
 
 ## Set up Atom
-install tools: `stack install ghc-mod hlint stylish-haskell ghcid  # slow`  
+install tools: `stack install ghc-mod hlint stylish-haskell  # slow`  
 install Atom (text editor & IDE): <http://atom.io>  
 start Atom  
 install plugins: Atom Preferences -> Install,   
@@ -104,7 +108,7 @@ enter GHCI commands here using CTRL-enter or CMD-enter
 `:reload  # after saving changes in hello.hs`  
 `:help`  
 `:quit`  
-You can also...
+You can also run regular GHCI in a terminal pane:
 
 ## Run terminal commands in Atom
 Packages -> Term 3 -> Open New Terminal In Right Pane (eg)
@@ -113,27 +117,31 @@ Packages -> Term 3 -> Open New Terminal In Right Pane (eg)
 in terminal: `stack new hello simple`  
 in Atom: File -> Open, select and open the "hello" folder (with no file selected)  
 **you should see:** in the sidebar,  
-&nbsp;&nbsp; .stack-work  
-&nbsp;&nbsp; src/  
-&nbsp;&nbsp;   Main.hs     # new program, similar to hello.hs. Click to open it  
-&nbsp;&nbsp; hello.cabal   # package & program properties  
-&nbsp;&nbsp; LICENSE  
-&nbsp;&nbsp; Setup.hs  
-&nbsp;&nbsp; stack.yaml   # project properties
+```
+.stack-work  
+src/  
+  Main.hs     # new program, similar to hello.hs. Click to open it  
+hello.cabal   # package & program properties  
+LICENSE  
+Setup.hs  
+stack.yaml    # project properties
+```
 
 ## Build/run/install your package
 in terminal:  
-`cd hello             # enter the project directory (if necessary)`  
-`stack build          # build this project's program(s)`  
-`stack exec -- hello  # run this project's hello program in place`  
-`stack install        # install the hello program in ~/.local/bin`  
-`(%USERPROFILE%\.local\bin on Windows)`  
-`cd; hello            # runs the installed hello program, if your PATH is set right (see setup)`  
+```
+cd hello             # enter the project directory (if necessary)
+stack build          # build this project's program(s)
+stack exec -- hello  # run this project's hello program in place
+stack install        # install the hello program in ~/.local/bin
+(%USERPROFILE%\.local\bin on Windows)
+cd; hello            # runs the installed hello program, if your PATH is set right (see setup)
+```
 
 ## More on Atom's Haskell support
 if errors are not highlighted in open files on starting Atom  
-&nbsp;&nbsp; make a change in source, or Haskell IDE -> gcc-mod -> Check to wake it up <https://github.com/atom-haskell/haskell-ghc-mod/issues/142>  
+&nbsp;&nbsp; File -> Save will wake it up ([haskell-ghc-mod/#142](https://github.com/atom-haskell/haskell-ghc-mod/issues/142))  
 if errors are reported but the file compiles without error at the command line  
-&nbsp;&nbsp; haskell-ghc-mod (ghc-mod) requires a workaround for multi-package stack projects <https://github.com/DanielG/ghc-mod/issues/787>  
+&nbsp;&nbsp; in multi-package stack projects, haskell-ghc-mod (ghc-mod) requires a workaround ([ghc-mod/#787](https://github.com/DanielG/ghc-mod/issues/787))  
 &nbsp;&nbsp; see also <https://github.com/DanielG/ghc-mod/wiki> for other possible causes
 
