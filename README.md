@@ -1,16 +1,21 @@
-# Easy Haskell IDE Setup 2016
+# Haskell Atom Setup 2016
 
-Public url: <http://joyful.com/haskell-ide-setup>  
-Created:    2016/5/12 by Simon Michael (sm), <simon@joyful.com>. Last updated: 2016/5/15  
-Discussion: #haskell-beginners, #haskell-atom, #haskell-stack, #haskell, ...
+What is the least painful way to get Haskell and a modern, user-friendly development environment set up ?
+Based on my periodic attempts to set up the available Haskell IDEs, and to support newcomers in the Haskell IRC channels,
+as of early 2016 it's [stack](http://haskellstack.org) and [Atom](http://atom.io)
+(unless you're on a mac and willing to pay and be in a slightly walled garden, in which case it's [Haskell for Mac](http://haskellformac.com)).
 
-As of 2016 (Q2), what's the least painful way to get Haskell and a modern, straightforward development environment set up ?
+Here are some recipes for setting up Haskell and Atom from scratch,
+as reliably, easily and platform-independently as possible.
+<!-- (Note: Atom the text editor/IDE, not atom the embedded systems DSL). -->
+Please test them yourself and submit improvements.
+I hope you find this doc helpful;
+when it becomes obsolete/wrong or there's a much better place for it, let me know.
 
-If you're on a mac and willing to pay, it's <http://haskellformac.com>, though this may be less integrated with the Haskell ecosystem.
-
-Otherwise, here are some recipes, intended to be cross-platform and as reliable and easy as currently possible.
-I hope you find this helpful; please test it and submit improvements.
-When this doc becomes obsolete/wrong or there's a much better place for it, let me know.
+Url:         <https://github.com/simonmichael/haskell-atom-setup>  
+Created:     2016/5/12 by Simon Michael (email:<simon@joyful.com>, freenode:sm)  
+Updated:     2016/5/16  
+Discussion:  [#haskell-atom](http://webchat.freenode.net/?channels=haskell-atom) (see also: #haskell-beginners, #haskell-stack, #haskell, #atom)
 
 ## Set up Haskell
 install stack (haskell build tool): <http://haskellstack.org>  
