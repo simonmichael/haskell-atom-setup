@@ -1,30 +1,33 @@
 # Haskell Atom Setup 2016
 
 What is the least painful way to get Haskell and a modern, user-friendly development environment set up ?
-Based on my periodic attempts to set up the available Haskell IDEs, and to support newcomers in the Haskell IRC channels,
+Based on my periodic attempts to set up the available Haskell IDEs, and to support newcomers on IRC,
 as of early 2016 it's [stack](http://haskellstack.org) and [Atom](http://atom.io)
 (unless you're on a mac and willing to pay and be in a slightly walled garden, in which case it's [Haskell for Mac](http://haskellformac.com)).
 
-Here are some recipes for setting up Haskell and Atom from scratch,
-as reliably, easily and platform-independently as possible.
-<!-- (Note: Atom the text editor/IDE, not atom the embedded systems DSL). -->
-Please test them yourself and submit improvements.
-I hope you find this doc helpful;
-when it becomes obsolete/wrong or there's a much better place for it, let me know.
+Here are some recipes for setting up Haskell and Atom from scratch, on any of the major platforms, as reliably and easily as possible.
+
+For now, this involves some work; you'll need to download things, run terminal commands, wait for things to build, edit files and configure settings.
+With a fast connection/machine and the guidance below, it should take less than half an hour, most of that unattended.
+
+Please test this doc yourself and send pull requests to improve it.
+Quick feedback via IRC is also welcome.
+When it becomes obsolete/wrong or there's a much better place for it, let me know.
+I hope you find it helpful.
 
 Url:         <https://github.com/simonmichael/haskell-atom-setup>  
 Created:     2016/5/12 by Simon Michael (email:<simon@joyful.com>, freenode:sm)  
 Updated:     2016/5/16  
-Discussion:  [#haskell-atom](http://webchat.freenode.net/?channels=haskell-atom) (see also: #haskell-beginners, #haskell-stack, #haskell, #atom)
+Discussion:  [#haskell-atom](http://webchat.freenode.net/?channels=haskell-atom) (also: [issues](https://github.com/simonmichael/haskell-atom-setup/issues), #haskell-beginners, #haskell-stack, #haskell, #atom, haskell-cafe)
 
 ## Set up Haskell
-install stack (haskell build tool): <http://haskellstack.org>  
+install stack (Haskell build tool): <http://haskellstack.org>  
 add stack's bin directory to your PATH if possible (`echo 'export PATH=\$HOME/.local/bin:\$PATH' >> ~/.bashrc`)  
-install GHC (haskell compiler): stack setup
+install GHC (Haskell compiler): stack setup
 
 ## Set up Atom
 install tools: `stack install ghc-mod hlint stylish-haskell ghcid  # slow`  
-install Atom (editor & IDE): <http://atom.io>  
+install Atom (text editor & IDE): <http://atom.io>  
 start Atom  
 install plugins: Atom Preferences -> Install,   
 &nbsp;&nbsp; search for haskell, install language-haskell, ide-haskell, ide-haskell-repl, haskell-ghc-mod  
@@ -53,7 +56,7 @@ stack ghc hello.hs  # compile the program
 ```
 stack ghci
 :load hello.hs
-:main    # or any haskell expression
+:main    # or any Haskell expression
 :reload  # after changing hello.hs
 :help
 :quit
@@ -84,7 +87,7 @@ if Haskell IDE -> Prettify does nothing
 ## Test your program interactively in Atom
 while viewing hello.hs: Haskell IDE -> Open REPL  
 you should see a new pane with a \*Main> prompt. Enter GHCI commands here using CTRL-enter or CMD-enter  
-:main    # or any haskell expression  
+:main    # or any Haskell expression  
 :reload  # after saving changes in hello.hs  
 :help  
 :quit
@@ -114,10 +117,10 @@ stack install        # install the hello program in ~/.local/bin
 cd; hello            # runs the installed hello program, if your PATH is set right (see setup)
 ```
 
-## More on Atom haskell support
+## More on Atom's Haskell support
 if errors are not highlighted in open files on starting Atom  
 &nbsp;&nbsp; make a change in source, or Haskell IDE -> gcc-mod -> Check to wake it up <https://github.com/atom-haskell/haskell-ghc-mod/issues/142>  
 if errors are reported but the file compiles without error at the command line  
-&nbsp;&nbsp; haskell-ghc-mod (ghc-mod) requires a workaround in multi-package stack projects <https://github.com/DanielG/ghc-mod/issues/787>  
+&nbsp;&nbsp; haskell-ghc-mod (ghc-mod) requires a workaround for multi-package stack projects <https://github.com/DanielG/ghc-mod/issues/787>  
 &nbsp;&nbsp; see also <https://github.com/DanielG/ghc-mod/wiki> for other possible causes
 
