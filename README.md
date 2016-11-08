@@ -43,7 +43,8 @@ Discussion:  [#haskell](http://webchat.freenode.net/?channels=haskell), [issues
 install stack (Haskell build tool): <http://haskell-lang.org/get-started>  
 add stack's bin directory to your PATH if possible. Eg:  
 &nbsp;&nbsp; `echo 'export PATH=\$HOME/.local/bin:\$PATH' >> ~/.bashrc`  
-install a default instance of GHC (Haskell compiler) for your user: `stack setup`
+install a default instance of GHC (Haskell compiler) for your user:  
+&nbsp;&nbsp; `stack setup`
 
 ## Create a minimal program in terminal
 in a terminal/command/shell window:
