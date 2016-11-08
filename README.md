@@ -19,7 +19,7 @@ I hope you find it useful.
 
 Url:         <https://github.com/simonmichael/haskell-atom-setup>  
 Created:     2016/5/12 by Simon Michael (email:<simon@joyful.com>, freenode:sm)  
-Updated:     2016/11/7
+Updated:     2016/11/7  
 Discussion:  [#haskell](http://webchat.freenode.net/?channels=haskell), [issues](https://github.com/simonmichael/haskell-atom-setup/issues), #atom, haskell-cafe list
 
 
