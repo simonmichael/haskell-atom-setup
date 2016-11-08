@@ -40,10 +40,10 @@ Discussion:  [#haskell](http://webchat.freenode.net/?channels=haskell), [issues
 <!-- markdown-toc end -->
 
 ## Set up Haskell
-install stack (Haskell build tool): <http://haskellstack.org>  
+install stack (Haskell build tool): <http://haskell-lang.org/get-started>  
 add stack's bin directory to your PATH if possible. Eg:  
 &nbsp;&nbsp; `echo 'export PATH=\$HOME/.local/bin:\$PATH' >> ~/.bashrc`  
-install GHC (Haskell compiler): `stack setup`
+install a default instance of GHC (Haskell compiler) for your user: `stack setup`
 
 ## Create a minimal program in terminal
 in a terminal/command/shell window:
