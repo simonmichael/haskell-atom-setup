@@ -20,7 +20,8 @@ I hope you find it useful.
 Url:         <https://github.com/simonmichael/haskell-atom-setup>  
 Created:     2016/5/12 by Simon Michael (email:<simon@joyful.com>, freenode:sm)  
 Updated:     2016/5/16  
-Discussion:  [#haskell](http://webchat.freenode.net/?channels=haskell) (also: [issues](https://github.com/simonmichael/haskell-atom-setup/issues), #atom, haskell-cafe)
+Discussion:  [#haskell](http://webchat.freenode.net/?channels=haskell), [issues](https://github.com/simonmichael/haskell-atom-setup/issues), #atom, haskell-cafe list
+
 
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-generate-toc again -->
 **Table of Contents**
