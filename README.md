@@ -12,15 +12,17 @@ They briefly note the steps required, and also the results you can expect (somet
 You don't need any previous Haskell knowledge, but you will need to download things, run terminal commands, wait for builds, edit files and configure settings.
 With a fast connection/machine and the hints below, it should take less than half an hour, most of that unattended.
 
-This doc will evolve as needed; please test it yourself and send pull requests.
-Quick feedback via IRC is also welcome.
-When it becomes obsolete (hopefully soon), or there's a much better place for it, let me know.
+This doc can evolve if you test it yourself and send pull requests (quick feedback via IRC is also welcome).
+Note as of late 2016 I have moved from Atom to Intellij (similar features, more refined and robust) 
+and I've stopped updating this doc myself.
+
+If it is obsolete or there's a much better place for it, let me know.
 I hope you find it useful.
 
 Url:         <https://github.com/simonmichael/haskell-atom-setup>  
 Created:     2016/5/12 by Simon Michael (email:<simon@joyful.com>, freenode:sm)  
-Updated:     2016/11/7  
-Discussion:  [#haskell](http://webchat.freenode.net/?channels=haskell), [issues](https://github.com/simonmichael/haskell-atom-setup/issues), #atom, haskell-cafe list
+Updated:     2016/12/26  
+Discussion:  [#haskell](http://webchat.freenode.net/?channels=haskell), [issues](https://github.com/simonmichael/haskell-atom-setup/issues), haskell-cafe list
 
 
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-generate-toc again -->
