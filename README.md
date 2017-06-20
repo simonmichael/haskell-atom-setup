@@ -77,20 +77,24 @@ stack ghci
 <!-- ``` -->
 
 ## Set up Atom
-install tools: `stack install ghc-mod hlint stylish-haskell  # slow`  
-install Atom (text editor & IDE): <http://atom.io>  
-start Atom  
-install plugins: Atom Preferences -> Install,   
-&nbsp;&nbsp; search for haskell, install language-haskell, ide-haskell, ide-haskell-repl, haskell-ghc-mod  
-&nbsp;&nbsp; search for term3, install term3  
-configure plugins: in plugin's settings,  
-ide-haskell  
-&nbsp;&nbsp; ?  
-ide-haskell-repl  
-&nbsp;&nbsp; Command Args: ghci  
-&nbsp;&nbsp; Command Path: stack  # or the stack executable's absolute path, eg /usr/local/bin/stack. Don't use ~.  
-haskell-ghc-mod  
-&nbsp;&nbsp; Additional Path Directories: ... # eg on mac: /Users/USERNAME/.local/bin, /usr/local/bin
+1. install tools: `stack install ghc-mod hlint stylish-haskell  # slow`  
+2. install Atom (text editor & IDE): <http://atom.io>  
+3. start Atom  
+4. install plugins: `Atom Preferences` -> `Install`
+    * `search for haskell`
+        - install `language-haskell`, `ide-haskell`, `ide-haskell-repl` and `haskell-ghc-mod` 
+        
+    * `search for term3`
+        - install `term3`
+        
+5. configure plugins: `Atom Preferences` -> `Packagages` 
+  * `ide-haskell`
+    - nothing ?  
+  * `ide-haskell-repl`  
+     - `Command Args`: `ghci`  
+     - `Command Path`: `stack`  # or the stack executable's absolute path, eg /usr/local/bin/stack. Don't use ~.  
+   * `haskell-ghc-mod`  
+     - `Additional Path Directories`: ... # eg on mac: /Users/USERNAME/.local/bin, /usr/local/bin
 
 ## View your program in Atom
 File -> Open, select hello.hs  
