@@ -13,7 +13,7 @@ You don't need any previous Haskell knowledge, but you will need to download thi
 With a fast connection/machine and the hints below, it should take less than half an hour, most of that unattended.
 
 This doc can evolve if you test it yourself and send pull requests (quick feedback via IRC is also welcome).
-Note as of late 2016 I have moved from Atom to Intellij (similar features, more refined and robust) 
+Note as of late 2016 I have moved from Atom to Intellij (similar features, more refined and robust)
 and I've stopped updating this doc myself.
 
 If it is obsolete or there's a much better place for it, let me know.
@@ -42,13 +42,13 @@ Discussion:  [#haskell](http://webchat.freenode.net/?channels=haskell), [issues
 <!-- markdown-toc end -->
 
 ## Set up Haskell
-install stack (Haskell build tool): <http://haskell-lang.org/get-started>  
-add stack's bin directory to your PATH if possible. Eg:  
-&nbsp;&nbsp; `echo 'export PATH=\$HOME/.local/bin:\$PATH' >> ~/.bashrc`  
-install a default instance of GHC (Haskell compiler) for your user:  
-&nbsp;&nbsp; `stack setup`
+1. Install `Stack`, (Haskell build tool): <http://haskell-lang.org/get-started>  
+2. Add `Stack`'s bin directory to your PATH if possible.
+  * Eg: `echo 'export PATH=\$HOME/.local/bin:\$PATH' >> ~/.bashrc`  
+3. Install a default instance of GHC (Haskell compiler) for your user:  
+  * `stack setup`
 
-## Create a minimal program in terminal
+### Create a minimal program in terminal (Optional)
 in a terminal/command/shell window:
 ```
 echo 'main = putStrLn "hello world"' > hello.hs
@@ -56,7 +56,7 @@ stack ghc hello.hs  # compile the program
 ./hello             # run it
 ```
 
-## Test your program interactively in terminal
+### Test your program interactively in terminal (Optional)
 ```
 stack ghci
 :load hello.hs
@@ -77,50 +77,62 @@ stack ghci
 <!-- ``` -->
 
 ## Set up Atom
-install tools: `stack install ghc-mod hlint stylish-haskell  # slow`  
-install Atom (text editor & IDE): <http://atom.io>  
-start Atom  
-install plugins: Atom Preferences -> Install,   
-&nbsp;&nbsp; search for haskell, install language-haskell, ide-haskell, ide-haskell-repl, haskell-ghc-mod  
-&nbsp;&nbsp; search for term3, install term3  
-configure plugins: in plugin's settings,  
-ide-haskell  
-&nbsp;&nbsp; ?  
-ide-haskell-repl  
-&nbsp;&nbsp; Command Args: ghci  
-&nbsp;&nbsp; Command Path: stack  # or the stack executable's absolute path, eg /usr/local/bin/stack. Don't use ~.  
-haskell-ghc-mod  
-&nbsp;&nbsp; Additional Path Directories: ... # eg on mac: /Users/USERNAME/.local/bin, /usr/local/bin
+1. install tools: `stack install ghc-mod hlint stylish-haskell  # slow`  
+2. install Atom (text editor & IDE): <http://atom.io>  
+3. start Atom  
+4. install plugins: `Atom Preferences` -> `Install`
+    * `search for haskell`
+        - install `language-haskell`, `ide-haskell`, `ide-haskell-repl` and `haskell-ghc-mod`
 
-## View your program in Atom
-File -> Open, select hello.hs  
-Haskell IDE -> Toggle Panel hides/shows Error/Warning/Lint/... panes  
-**you should see:**  
-&nbsp;&nbsp; any syntax or type errors highlighted in place and reported in the Error pane  
-&nbsp;&nbsp; any hlint cleanup suggestions highlighted in place and reported in the Lint pane  
-&nbsp;&nbsp; when typing, some keywords (module, let, ...) are autocompleted (and some (import, function names, ...) are not ?)  
-if Haskell IDE -> Prettify gives an error  
-&nbsp;&nbsp; stylish-haskell may not be in your path if Atom was started from GUI. Try starting from terminal (on mac: open -a Atom)  
-if Haskell IDE -> Prettify does nothing  
-&nbsp;&nbsp; ?
+    * `search for term3`
+        - install `term3`
 
-## Test your program interactively in Atom
-while viewing hello.hs: Haskell IDE -> Open REPL  
-**you should see:** a new pane with a \*Main> prompt  
-enter GHCI commands here using CTRL-enter or CMD-enter  
+5. configure plugins: `Atom Preferences` -> `Packagages`
+  * `ide-haskell`
+    - nothing ?  
+  * `ide-haskell-repl`  
+     - `Command Args`: `ghci`  
+     - `Command Path`: `stack`  # or the stack executable's absolute path, eg /usr/local/bin/stack. Don't use ~.  
+   * `haskell-ghc-mod`  
+     - `Additional Path Directories`: ... # eg on mac: /Users/USERNAME/.local/bin, /usr/local/bin
+
+### View your program in Atom
+1. `File` -> `Open`, select `hello.hs` (or other file you like)
+2. `Haskell IDE` -> `Toggle Panel` hides/shows `Error/Warning/Lint/...` panes  
+
+**With an module open, you should see:**  
+* Syntax or type errors highlighted in place and reported in the `Error` pane  
+* Hhlint cleanup suggestions highlighted in place and reported in the `Lint` pane  
+* Auto-completion when typing both Haskell keywords (`module`, `let`, etc) and local names
+
+#### Troubleshooting
+* `Haskell IDE` -> `Prettify` gives an error:
+  * `stylish-haskell` may not be in your path if Atom was started from GUI. Try starting from terminal (on mac: open -a Atom)
+  * The file parsing failed due to, for example, misplaced code
+
+* if `Haskell IDE` -> `Prettify` does nothing, chances are it is already prettified
+
+### Test your program interactively in Atom
+While viewing `hello.hs`, do `Haskell IDE` -> `Open REPL` and after you should see a new pane with a `\*Main>` prompt.
+
+Enter GHCI commands here using CTRL-enter or CMD-enter:
+
 `:main    # or any Haskell expression`  
 `:reload  # after saving changes in hello.hs`  
 `:help`  
 `:quit`  
+
+### Run terminal commands in Atom
 You can also run regular GHCI in a terminal pane:
 
-## Run terminal commands in Atom
-Packages -> Term 3 -> Open New Terminal In Right Pane (eg)
+`Packages` -> `Term 3` -> `Open New Terminal In Right Pane` (eg)
 
 ## Create a program, package and project
-in terminal: `stack new hello simple`  
-in Atom: File -> Open, select and open the "hello" folder (with no file selected)  
-**you should see:** in the sidebar,  
+
+* In the terminal: `stack new hello simple`  
+* In Atom: `File` -> `Open`, select and open the `hello` directory (with no file selected)  
+
+**You should see:**, in the sidebar:
 ```
 .stack-work  
 src/  
@@ -132,7 +144,9 @@ stack.yaml    # project properties
 ```
 
 ## Build/run/install your package
-in terminal:  
+
+In the terminal:  
+
 ```
 cd hello             # enter the project directory (if necessary)
 stack build          # build this project's program(s)
@@ -143,9 +157,9 @@ cd; hello            # runs the installed hello program, if your PATH is set rig
 ```
 
 ## More on Atom's Haskell support
-if errors are not highlighted in open files on starting Atom  
-&nbsp;&nbsp; File -> Save will wake it up ([haskell-ghc-mod/#142](https://github.com/atom-haskell/haskell-ghc-mod/issues/142))  
-if errors are reported but the file compiles without error at the command line  
-&nbsp;&nbsp; in multi-package stack projects, haskell-ghc-mod (ghc-mod) requires a workaround ([ghc-mod/#787](https://github.com/DanielG/ghc-mod/issues/787))  
-&nbsp;&nbsp; see also <https://github.com/DanielG/ghc-mod/wiki> for other possible causes
 
+* If errors are not highlighted in open files on starting Atom  
+    * `File` -> `Save` will wake it up ([haskell-ghc-mod/#142](https://github.com/atom-haskell/haskell-ghc-mod/issues/142))  
+* If errors are reported but the file compiles without error at the command line  
+    * in multi-package stack projects, haskell-ghc-mod (ghc-mod) requires a workaround ([ghc-mod/#787](https://github.com/DanielG/ghc-mod/issues/787))  
+    * see also <https://github.com/DanielG/ghc-mod/wiki> for other possible causes
