@@ -1,4 +1,6 @@
 <!-- -*- markdown-toc-user-toc-structure-manipulation-fn:cdr; -*- -->
+[2020: obsolete, use VS Code instead]
+
 
 # Haskell Atom Setup 2016
 
